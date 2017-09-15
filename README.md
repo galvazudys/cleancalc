@@ -30,7 +30,12 @@ function multiply(arg1, arg2) {
 ---
 
 > And in final function we gone have two arguments (Numbers) and return division value.
+```javascript
+function divide(arg1, arg2) {
+	return arg1 / arg2;
+};
+```
 ---
-### The End
+
 
 
