@@ -40,6 +40,7 @@
     * _return_ : division of two argumnets,arg1 and arg2
     * _behavior_ : divide two numbers
 ---
+## Version 1.1.0
 * _operateIntermediary_ : function
     * args: 3
         * _operation_ : function
@@ -51,3 +52,4 @@
     * _return_ : return value from operation function
     * _purpose_ : take input from user of action and return value from action
     * _behavior_ : return value from executed operation function that takes arg1 and arg2
+
