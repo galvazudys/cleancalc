@@ -37,5 +37,12 @@ function divide(arg1, arg2) {
 ```
 ---
 
+> In this version of application we figure out add simpler way to do actions in your application. Next function makes that very easy to perfom. You can select action you want perform and pass two arguments.
+
+```javascript
+function operateIntermediary(operation, arg1, arg2) {
+	return operation(arg1, arg2);
+};
+```
 
 

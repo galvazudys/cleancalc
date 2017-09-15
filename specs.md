@@ -39,4 +39,15 @@
             * purpose : use to do calcultaion
     * _return_ : division of two argumnets,arg1 and arg2
     * _behavior_ : divide two numbers
-
+---
+* _operateIntermediary_ : function
+    * args: 3
+        * _operation_ : function
+            * purpose: take action to perform on arguments
+        *  _arg1_ : number
+            * purpose : use as a argument for operation function
+        * _arg2_ : number
+            * purpose : use as a argument for operation function
+    * _return_ : return value from operation function
+    * _purpose_ : take input from user of action and return value from action
+    * _behavior_ : return value from executed operation function that takes arg1 and arg2
