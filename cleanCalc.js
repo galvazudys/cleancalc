@@ -1,55 +1,24 @@
-var lastResult = 0000;
-
-function add(arg1, arg2) {
-	return arg1 + arg2;
-};
-
-function subtract(arg1, arg2) {
-	return arg1 - arg2;
-};
-
-function multiply(arg1, arg2) {
-	return arg1 * arg2;
-};
-
-function divide(arg1, arg2) {
-	return arg1 / arg2;
-};
-
-
-lastResult = add(2, 4);
-lastResult = add(5, lastResult);
-lastResult = multiply(3,2);
-
-
-
-// -------------------  version the second  --------------------- //
-
-lastResult = 0000;
-
-function operateIntermediary(operation, arg1, arg2) {
-	return operation(arg1, arg2);
-};
-
-lastResult = operateIntermediary(add, 2, 4);
-lastResult = operateIntermediary(add, 5, lastResult);
-lastResult = operateIntermediary(multiply, 3,2);
-
-
-// -------------------  version the third  --------------------- //
-
-lastResult = 0000;
-
-function operate(operation, arg1, arg2) {
-	if (arg2) {
-		lastResult = operation(arg1, arg2);
-		return lastResult;
-	} else {
-		lastResult = operation(arg1, lastResult);
-		return lastResult;
+var calc = {
+	lastResult: 0000,
+	operate:function(operation,arg1,arg2){
+		if (arg2) {
+			this.lastResult = operation(arg1, arg2);
+			return lastResult;
+		} else {
+			this.lastResult = operation(arg1, this.lastResult);
+			return this.lastResult;
+		}
+	},
+	add:function(arg1,arg2){
+		return arg1 + arg2;
+	},
+	subtract: function(arg1,arg2){
+		return arg1 - arg2;
+	},
+	multiply: function(arg1,arg2){
+		return arg1 * arg2;
+	},
+	divide:function(arg1,arg2){
+		return arg1 / arg2;
 	}
 };
-
-lastResult = operate(add, 2, 4);
-lastResult = operate(add, 5);
-lastResult = operate(multiply, 3,2);

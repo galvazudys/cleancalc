@@ -1,80 +1,54 @@
-# Documentation for __cleanCalc__ v1.0.0
+# Documentation for __cleanCalc__ 
 
+## New version: 2.0.0
 
-* _add_: function
-    * args: 2
-        * _arg1_: number
-            * purpose: use to do calculation
-        * _arg2_: number
-            * purpose : use to do calcultaion
-    * _return_ : sum of two values arg1 and arg2
-    * _behavior_ : sum up two numbers
+* calc: object
+    * properties: 1
+        * lastResult: number
+            * initialized: 0000
+            * pupose: to allow chained operations
+    * methods: 5
+        * operate: function
+            * args: 3
+                * operation: string
+                    * purpose: designates which method to call
+                * arg1: number
+                    * purpose: required operand
+                * arg2: number
+                    * purpose: optional operand
+            * return: number
+            * behavior: calls the right method with arg1 and arg2 OR * * * lastResult
+            * purpose: allows users to access math methods from a single interface
 
----
-* _subtract_: function
-    * args: 2
-        * _arg1_: number
-            * purpose: use to do calculation
-        * _arg2_: number
-            * purpose : use to do calcultaion
-    * _return_: difrence of two arguments,arg1 and arg2
-    * _behavior_ : subtract two numbers
+        * add: function
+            * args: 2
+                * arg1, arg2: number
+                    * purpose: math need numbers
+            * return: number
+            * behavior: adds arg1 to arg2 and returns the sum
+            * purpose: so users can add
 
----
-* _multiply_: function
-    * args: 2
-        * _arg1_: number
-            * purpose: use to do calculation
-        * _arg2_: number
-            * purpose : use to do calcultaion
-    * _return_: multiplication of two arguments,arg1 and arg2
-    * _behavior_ : multiply two numbers
+        * subtract: function
+            * args: 2
+                * arg1, arg2: number
+                    * purpose: math need numbers
+            * return: number
+            * behavior: sutracts arg1 to arg2 and returns the result
+            * purpose: so users can subtract
 
----
-* _divide_ : function
-    * args: 2
-        * _arg1_: number
-            * purpose: use to do calculation
-        * _arg2_: number
-            * purpose : use to do calcultaion
-    * _return_ : division of two argumnets,arg1 and arg2
-    * _behavior_ : divide two numbers
----
-## Version 1.1.0
-* _operateIntermediary_ : function
-    * args: 3
-        * _operation_ : function
-            * purpose: take action to perform on arguments
-        *  _arg1_ : number
-            * purpose : use as a argument for operation function
-        * _arg2_ : number
-            * purpose : use as a argument for operation function
-    * _return_ : return value from operation function
-    * _purpose_ : take input from user of action and return value from action
-    * _behavior_ : return value from executed operation function that takes arg1 and arg2
+        * multiply: function
+            * args: 2
+                * arg1, arg2: number
+                    * purpose: math need numbers
+            * return: number
+            * behavior: multiplies arg1 to arg2 and returns the result
+            * purpose: so users can multiply
 
----
-## Version 1.2.0
-
-* _operate_: function
-    * args : 3
-        * _operation_ : function
-            * purpose: take action to perform on arguments
-        *  _arg1_ : number
-            * purpose : use as a argument for operation function
-        * _arg2_ : number
-            * purpose : use as a argument for operation function
-    * if: arg2
-        * _return_ : lastResult the args are equated operation function operate
-    * else : 
-        * _return_ : lastResult the single arg1 is equated by using operation function.   
-    * _behavior_ : the function will be able to take two arguments and do  operation by using function from version 1.0.0
-    * _purpose_ : The function will be able complete computational mathematics in program.
----
-* _lastResult_: number
-	* initialized: 0000
-		* pupose: to allow chained operations
----
-
-
-    
+        * divide: function
+            * args: 2
+                * arg1, arg2: number
+                    * purpose: math need numbers
+            * return: number
+            * behavior: divides arg1 to arg2 and returns the result
+            * purpose: so users can divide
+    * purpose: use to store actions you can perform with arguments for cleancalc 
