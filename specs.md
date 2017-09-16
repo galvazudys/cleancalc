@@ -70,3 +70,11 @@
         * _return_ : lastResult the single arg1 is equated by using operation function.   
     * _behavior_ : the function will be able to take two arguments and do  operation by using function from version 1.0.0
     * _purpose_ : The function will be able complete computational mathematics in program.
+---
+* _lastResult_: number
+	* initialized: 0000
+		* pupose: to allow chained operations
+---
+
+
+    
