@@ -49,4 +49,24 @@ function operateIntermediary(operation, arg1, arg2) {
 };
 ```
 
+---
+
+## Version 1.2.0
+
+### New version changes :
+
+> This version got new function that can perform not only action with 3 arguments,but also can check or second argument exist,if exist it's perform operation function with two arguments profided,else for second argument it takes last returned value.
+
+```javascript
+function operate(operation, arg1, arg2) {
+	if (arg2) {
+		lastResult = operation(arg1, arg2);
+		return lastResult;
+	} else {
+		lastResult = operation(arg1, lastResult);
+		return lastResult;
+	}
+};
+``` 
+
 
