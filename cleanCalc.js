@@ -31,10 +31,12 @@ var calc = {
 function testingMethods(objOperate,method,functionToTest, args, assume_result) {
     var output = objOperate[method](functionToTest, ...args);
     var result = (output == assume_result);
-    console.log(result, '! Output: ', output, ' || Expected: ', assume_result);
+    console.log('Passed/Failed: ',result, '|| Output: ', output, ' || Expected: ', assume_result);
 }
+console.log('============================================')
+console.log('Test,Test,Test,Test,Test,Test,Test,Test')
+console.log('============================================')
 
-testingMethods(calc,'operate',calc.add,[5, 8], 13);
 // Adding tetsing
 console.log('This is add method test returns true if pass test')
 testingMethods(calc,'operate',calc.add, [5, 8], 13);
