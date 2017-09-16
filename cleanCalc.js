@@ -85,11 +85,8 @@ testingMethods(calc,'operate',calc.divide, [9, -3], -3);
 
 
 
-console.log('RECEIVED: ',process.argv[0],process.argv[1]);
-console.log('operator: ', process.argv[2]);
-console.log('number 1: ', process.argv[3]);
-console.log('number 2: ', process.argv[4]);
-if(process.argv[2] && process.argv[3]){
 
+if(process.argv[2] && process.argv[3]){
+	
 	console.log('OUTPUT:', calc.operate(process.argv[2], parseInt(process.argv[3]), parseInt(process.argv[4])));
 }
