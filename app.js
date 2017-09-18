@@ -1,4 +1,5 @@
 var displayScreen = document.getElementById('display');
+var result = '';
 var actionToPerform = '';
 var firstNumber = '';
 var secondNumber = '';
@@ -17,6 +18,7 @@ function passingActionOrValue(event, operatorSing) {
 };
 
 function clearResult() {
+    result = '';
     displayScreen.textContent = '';
     actionToPerform = '';
     firstNumber = '';
@@ -24,5 +26,7 @@ function clearResult() {
 }
 
 function getActionGoing() {
-    displayScreen.textContent = calc.operate(actionToPerform, parseFloat(secondNumber), parseFloat(firstNumber));
+    result = calc.operate(actionToPerform, parseFloat(secondNumber), parseFloat(firstNumber));
+    displayScreen.textContent = result;
+    firstNumber = result;
 }
